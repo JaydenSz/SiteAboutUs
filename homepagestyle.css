@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.toppart {  
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+
+}
+.underlying {  
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: white;
+  text-align: center;
+
+
+}
+
+/* homebar thing */
+.topnav {
+  background-color: #000000;
+  overflow: visible;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.t1 {
+  font-family: "Roboto", "Comfortaa", monospace;
+}
+.dropdown {
+  float: inline-start;
+  position: relative; /* This line is important */
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
