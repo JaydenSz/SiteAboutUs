@@ -6,12 +6,24 @@
 </head>
 
     <title>Forms</title>
+    <head>
+        <h1>Submit changes here</h1>
+</head>
     <body>
         <body style="background-image: url('computer theme.jpeg');"> 
-        <form>
-            <label class="text" for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label class="text" for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
-          </form>
+            <form action="/submit" method="post">
+                <label class = "fontcolor" for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br><br>
+                
+                <label class="fontcolor" for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required><br><br>
+                
+                <label class="fontcolor" for="hobbies">Hobbies:  </label>
+                <input type="hobbies" id="hobbies" name="hobbies" required></textarea><br><br>
+                
+                <label class="fontcolor" for="favoriteColor">Favorite Color:</label>
+                <input type="color" id="favoriteColor" name="favoriteColor" value="#ff0000" required><br><br>
+                
+                <input type="submit" value="Submit">
+              </form>
     </body>

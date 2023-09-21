@@ -1,7 +1,23 @@
-html{
-    height: 100%;
-    width: 100%;
+form {
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.text {
+label, input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+.fontcolor {
+    color: white
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
     color: white
 }
