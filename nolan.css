@@ -1,7 +1,9 @@
-html {
+html, body {
   height: 100%;
+  margin: 0; /* Ensure no default margin */
   width: 100%;
 }
+
 .centered {
   position: absolute;
   top: 50%;
@@ -9,43 +11,48 @@ html {
   transform: translate(-50%, -50%);
   font-size: 40px;
 }
+
 .container {
   position: relative;
   text-align: center;
   color: white;
 }
+
 .toppart {  
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-
 }
+
 .underlying {  
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    color: white;
-    text-align: center;
-  
-
-}
-.center{
-  margin-left: auto;
-  margin-right: auto;
-  position: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: white;
+  text-align: center;
 }
 
 /* homebar thing */
 .topnav {
-  background-color: #000000;
-  overflow: visible;
+  background-color: #000000; /* Ensure background is black */
+  overflow: visible; /* Make overflow content visible */
+  position: sticky;
+  top: 0;
+  z-index: 10;  /* ensure it stays on top */
+  width: 100%;  /* ensure it takes the full width */
 }
 
+
 .topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 10px;
+    float: right; /* by default the links will float right */
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.topnav .dropdown, 
+.topnav a[href="forms.html"] {
+    float: left;
 }
 
 .topnav a:hover {
@@ -57,12 +64,16 @@ html {
   background-color: #04AA6D;
   color: white;
 }
+
 .t1 {
-  font-family: "Roboto", "Comfortaa", monospace;
+    font-family: "Roboto", "Comfortaa", monospace;
+    overflow: visible; /* Ensure overflow is visible */
+    width: 100%;  /* ensure it takes the full width */
 }
+
 .dropdown {
-  float: inline-start;
-  position: relative; /* This line is important */
+  float: left;  /* ensure it floats to the left */
+  position: relative;
   display: inline-block;
 }
 
@@ -78,4 +89,10 @@ html {
 
 .dropdown:hover .dropdown-content {
   display: grid;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  position: block;
 }
