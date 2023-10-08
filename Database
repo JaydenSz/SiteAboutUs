@@ -1,16 +1,22 @@
-DROP TABLE IF EXISTS [projects drop table  
-drop table if exists [jobs drop table  
-drop table if exists [skills drop table  
-drop table if exists [team niyaj drop table  
-drop table if exists [favorite color drop table  
-drop table if exists [birthday drop table  
-drop table if exists [coding experience drop table  
-drop table if exists [hobbies drop table  
-drop table if exists [preferred college drop table  
-drop table if exists [class jobs drop table  
-drop table if exists [emails (personal) drop table  drop table if exists [email (fusd)];CREATE TABLE [projects]
+CREATE DATABASE niyaj;
+USE niyaj;
+
+
+DROP TABLE IF EXISTS projects   
+drop table if exists jobs   
+drop table if exists skills  
+drop table if exists team_niyaj 
+drop table if exists favorite_color  
+drop table if exists birthday  
+drop table if exists coding_experience  
+drop table if exists hobbies   
+drop table if exists preferred_college   
+drop table if exists class_jobs   
+drop table if exists emails_(personal)   
+drop table if exists email_(fusd);
+CREATE TABLE projects
              (
-                          [website] TEXT NOT NULL
+                          website TEXT NOT NULL
              );
 
 /**
@@ -18,33 +24,33 @@ drop table if exists [emails (personal) drop table  drop table if exists [email 
 @description: All of our projects and endeavors
 @location: 1247.6484 724.83484
 @colors: title(#FFD1D1D1) Website(#FFFAFAFA)
-*/CREATE TABLE [Jobs]
+*/CREATE TABLE Jobs
              (
-                          [Webmaster] text autoincrement NOT NULL,
-                          [Front END Developer] text autoincrement NOT NULL,
-[Back- END Developer] text autoincrement NOT NULL,
-[Content Specialist] text autoincrement NOT NULL,
-[Tech Support] text autoincrement NOT NULL,
-FOREIGN KEY([Webmaster]) REFERENCES [Projects]([Website]) ON
+                          Webmaster text autoincrement NOT NULL,
+                          Front_END_Developer text autoincrement NOT NULL,
+Back_END_Developer text autoincrement NOT NULL,
+Content_Specialist text autoincrement NOT NULL,
+Tech_Support text autoincrement NOT NULL,
+FOREIGN KEY(Webmaster) REFERENCES Projects(Website) ON
 DELETE no action
 ON
 UPDATE no action,
-       FOREIGN KEY([Front END Developer]) REFERENCES [Projects]([Website])
-ON
-DELETE no action
-ON
-UPDATE no action,
-       FOREIGN KEY([Back- END Developer]) REFERENCES [Projects]([Website])
+       FOREIGN KEY( Front END Developer  ) REFERENCES  Projects  ( Website  )
 ON
 DELETE no action
 ON
 UPDATE no action,
-       FOREIGN KEY([Content Specialist]) REFERENCES [Projects]([Website])
+       FOREIGN KEY( Back- END Developer  ) REFERENCES  Projects  ( Website  )
 ON
 DELETE no action
 ON
 UPDATE no action,
-       FOREIGN KEY([Tech Support]) REFERENCES [Projects]([Website])
+       FOREIGN KEY( Content Specialist  ) REFERENCES  Projects  ( Website  )
+ON
+DELETE no action
+ON
+UPDATE no action,
+       FOREIGN KEY( Tech Support  ) REFERENCES  Projects  ( Website  )
 ON
 DELETE no action
 ON
@@ -56,39 +62,39 @@ UPDATE no action
 @description: All of our team roles
 @location: 1464.4132 596.2505
 @colors: title(#FFD1D1D1) Webmaster(#FFFAFAFA) Front End Developer(#FFFAFAFA) Back-end Developer(#FFFAFAFA) Content Specialist(#FFFAFAFA) Tech Support(#FFFAFAFA)
-*/CREATE TABLE [Skills]
+*/CREATE TABLE  Skills  
                    (
-                                [HTML] text autoincrement NOT NULL,
-                                [JavaScript] text autoincrement NOT NULL,
-                                [C++] text autoincrement NOT NULL,
-                                [SQL] text autoincrement NOT NULL,
-                                [PHP] text autoincrement NOT NULL,
-                                [Java] text autoincrement NOT NULL,
-                                FOREIGN KEY([HTML]) REFERENCES [Jobs]([Front       END Developer]) ON
+                                 HTML   text autoincrement NOT NULL,
+                                 JavaScript   text autoincrement NOT NULL,
+                                 C++   text autoincrement NOT NULL,
+                                 SQL   text autoincrement NOT NULL,
+                                 PHP   text autoincrement NOT NULL,
+                                 Java   text autoincrement NOT NULL,
+                                FOREIGN KEY( HTML  ) REFERENCES  Jobs  ( Front       END Developer  ) ON
                    DELETE no action
                    ON
                    UPDATE no action,
-                          FOREIGN KEY([JavaScript]) REFERENCES [Jobs]([Front             END Developer])
-                   ON
-                   DELETE no action
-                   ON
-                   UPDATE no action,
-                          FOREIGN KEY([C++]) REFERENCES [Jobs]([Front             END Developer])
+                          FOREIGN KEY( JavaScript  ) REFERENCES  Jobs  ( Front             END Developer  )
                    ON
                    DELETE no action
                    ON
                    UPDATE no action,
-                          FOREIGN KEY([SQL]) REFERENCES [Jobs]([Back-             END Developer])
+                          FOREIGN KEY( C++  ) REFERENCES  Jobs  ( Front             END Developer  )
                    ON
                    DELETE no action
                    ON
                    UPDATE no action,
-                          FOREIGN KEY([PHP]) REFERENCES [Jobs]([Back-             END Developer])
+                          FOREIGN KEY( SQL  ) REFERENCES  Jobs  ( Back-             END Developer  )
                    ON
                    DELETE no action
                    ON
                    UPDATE no action,
-                          FOREIGN KEY([Java]) REFERENCES [Jobs]([Back-             END Developer])
+                          FOREIGN KEY( PHP  ) REFERENCES  Jobs  ( Back-             END Developer  )
+                   ON
+                   DELETE no action
+                   ON
+                   UPDATE no action,
+                          FOREIGN KEY( Java  ) REFERENCES  Jobs  ( Back-             END Developer  )
                    ON
                    DELETE no action
                    ON
@@ -100,33 +106,33 @@ UPDATE no action
 @description: Coding skills
 @location: 1666.4636 887.57587
 @colors: title(#FFD1D1D1) HTML(#FFFAFAFA) JavaScript(#FFFAFAFA) C++(#FFFAFAFA) SQL(#FFFAFAFA) PHP(#FFFAFAFA) Java(#FFFAFAFA)
-*/CREATE TABLE [Team NIYAJ]
+*/CREATE TABLE  Team NIYAJ  
                          (
-                                      [Yashwanth Venkata Sunkesula] text autoincrement NOT NULL,
-                                      [Jayden Szeto] text autoincrement NOT NULL,
-                                      [Aryan Bhagia] text autoincrement NOT NULL,
-                                      [Nolan Li] text autoincrement NOT NULL,
-                                      [Ismail Patel] text autoincrement NOT NULL,
-                                      FOREIGN KEY([Yashwanth Venkata Sunkesula]) REFERENCES [Jobs]([Back-             END Developer]) ON
+                                       Yashwanth Venkata Sunkesula   text autoincrement NOT NULL,
+                                       Jayden Szeto   text autoincrement NOT NULL,
+                                       Aryan Bhagia   text autoincrement NOT NULL,
+                                       Nolan Li   text autoincrement NOT NULL,
+                                       Ismail Patel   text autoincrement NOT NULL,
+                                      FOREIGN KEY( Yashwanth Venkata Sunkesula  ) REFERENCES  Jobs  ( Back-             END Developer  ) ON
                          DELETE no action
                          ON
                          UPDATE no action,
-                                FOREIGN KEY([Jayden Szeto]) REFERENCES [Jobs]([Front                   END Developer])
-                         ON
-                         DELETE no action
-                         ON
-                         UPDATE no action,
-                                FOREIGN KEY([Aryan Bhagia]) REFERENCES [Jobs]([Webmaster])
+                                FOREIGN KEY( Jayden Szeto  ) REFERENCES  Jobs  ( Front                   END Developer  )
                          ON
                          DELETE no action
                          ON
                          UPDATE no action,
-                                FOREIGN KEY([Nolan Li]) REFERENCES [Jobs]([Content Specialist])
+                                FOREIGN KEY( Aryan Bhagia  ) REFERENCES  Jobs  ( Webmaster  )
                          ON
                          DELETE no action
                          ON
                          UPDATE no action,
-                                FOREIGN KEY([Ismail Patel]) REFERENCES [Jobs]([Tech Support])
+                                FOREIGN KEY( Nolan Li  ) REFERENCES  Jobs  ( Content Specialist  )
+                         ON
+                         DELETE no action
+                         ON
+                         UPDATE no action,
+                                FOREIGN KEY( Ismail Patel  ) REFERENCES  Jobs  ( Tech Support  )
                          ON
                          DELETE no action
                          ON
@@ -138,33 +144,33 @@ UPDATE no action
 @location: 3553.6384 1011.6017
 @columnsDescription:  Yashwanth Venkata Sunkesula() Jayden Szeto() Aryan Bhagia() Nolan Li() Ismail Patel()
 @colors: title(#FFD1D1D1) Yashwanth Venkata Sunkesula(#FFFAFAFA) Jayden Szeto(#FFFAFAFA) Aryan Bhagia(#FFFAFAFA) Nolan Li(#FFFAFAFA) Ismail Patel(#FFFAFAFA)
-*/CREATE TABLE [Favorite Color]
+*/CREATE TABLE  Favorite Color  
                                (
-                                            [Blue] text autoincrement NOT NULL,
-                                            [Green] text autoincrement NOT NULL,
-                                            [Green] text autoincrement NOT NULL,
-                                            [Blue] text autoincrement NOT NULL,
-                                            [Emerald Green] text autoincrement NOT NULL,
-                                            FOREIGN KEY([Blue]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                             Blue   text autoincrement NOT NULL,
+                                             Green   text autoincrement NOT NULL,
+                                             Green   text autoincrement NOT NULL,
+                                             Blue   text autoincrement NOT NULL,
+                                             Emerald Green   text autoincrement NOT NULL,
+                                            FOREIGN KEY( Blue  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                DELETE no action
                                ON
                                UPDATE no action,
-                                      FOREIGN KEY([Green]) REFERENCES [Team NIYAJ]([Ismail Patel])
-                               ON
-                               DELETE no action
-                               ON
-                               UPDATE no action,
-                                      FOREIGN KEY([Green]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                      FOREIGN KEY( Green  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                ON
                                DELETE no action
                                ON
                                UPDATE no action,
-                                      FOREIGN KEY([Blue]) REFERENCES [Team NIYAJ]([Jayden Szeto])
+                                      FOREIGN KEY( Green  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
                                ON
                                DELETE no action
                                ON
                                UPDATE no action,
-                                      FOREIGN KEY([Emerald Green]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                      FOREIGN KEY( Blue  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
+                               ON
+                               DELETE no action
+                               ON
+                               UPDATE no action,
+                                      FOREIGN KEY( Emerald Green  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                ON
                                DELETE no action
                                ON
@@ -176,33 +182,33 @@ UPDATE no action
 @location: 3689.6501 484.57538
 @columnsDescription:  Blue() Green() Green() Blue() Emerald Green()
 @colors: title(#FFD1D1D1) Blue(#FFFAFAFA) Green(#FFFAFAFA) Green(#FFFAFAFA) Blue(#FFFAFAFA) Emerald Green(#FFFAFAFA)
-*/CREATE TABLE [Birthday]
+*/CREATE TABLE  Birthday  
                                      (
-                                                  [10/16/2007] text autoincrement NOT NULL,
-                                                  [7 /31/2007] text autoincrement NOT NULL,
-                                                  [1 /24/2007] text autoincrement NOT NULL,
-                                                  [11/2/2006] text autoincrement NOT NULL,
-                                                  [4 /21/2007] text autoincrement NOT NULL,
-                                                  FOREIGN KEY([10/16/2007]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                                   10/16/2007   text autoincrement NOT NULL,
+                                                   7 /31/2007   text autoincrement NOT NULL,
+                                                   1 /24/2007   text autoincrement NOT NULL,
+                                                   11/2/2006   text autoincrement NOT NULL,
+                                                   4 /21/2007   text autoincrement NOT NULL,
+                                                  FOREIGN KEY( 10/16/2007  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                      DELETE no action
                                      ON
                                      UPDATE no action,
-                                            FOREIGN KEY([7/31/2007]) REFERENCES [Team NIYAJ]([Ismail Patel])
-                                     ON
-                                     DELETE no action
-                                     ON
-                                     UPDATE no action,
-                                            FOREIGN KEY([1/24/2007]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                            FOREIGN KEY( 7/31/2007  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                      ON
                                      DELETE no action
                                      ON
                                      UPDATE no action,
-                                            FOREIGN KEY([11/2/2006]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                            FOREIGN KEY( 1/24/2007  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                      ON
                                      DELETE no action
                                      ON
                                      UPDATE no action,
-                                            FOREIGN KEY([4/21/2007]) REFERENCES [Team NIYAJ]([Jayden Szeto])
+                                            FOREIGN KEY( 11/2/2006  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
+                                     ON
+                                     DELETE no action
+                                     ON
+                                     UPDATE no action,
+                                            FOREIGN KEY( 4/21/2007  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
                                      ON
                                      DELETE no action
                                      ON
@@ -214,33 +220,33 @@ UPDATE no action
 @location: 4082.5562 673.1602
 @columnsDescription:  10/16/2007() 7/31/2007() 1/24/2007() 11/2/2006() 4/21/2007()
 @colors: title(#FFD1D1D1) 10/16/2007(#FFFAFAFA) 7/31/2007(#FFFAFAFA) 1/24/2007(#FFFAFAFA) 11/2/2006(#FFFAFAFA) 4/21/2007(#FFFAFAFA)
-*/CREATE TABLE [Coding Experience]
+*/CREATE TABLE  Coding Experience  
                                            (
-                                                        [Expert] text autoincrement NOT NULL,
-                                                        [Intermediate] text autoincrement NOT NULL,
-                                                        [Intermediate] text autoincrement NOT NULL,
-                                                        [Intermediate] text autoincrement NOT NULL,
-                                                        [Beginner] text autoincrement NOT NULL,
-                                                        FOREIGN KEY([Expert]) REFERENCES [Team NIYAJ]([Jayden Szeto]) ON
+                                                         Expert   text autoincrement NOT NULL,
+                                                         Intermediate   text autoincrement NOT NULL,
+                                                         Intermediate   text autoincrement NOT NULL,
+                                                         Intermediate   text autoincrement NOT NULL,
+                                                         Beginner   text autoincrement NOT NULL,
+                                                        FOREIGN KEY( Expert  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  ) ON
                                            DELETE no action
                                            ON
                                            UPDATE no action,
-                                                  FOREIGN KEY([Intermediate]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula])
-                                           ON
-                                           DELETE no action
-                                           ON
-                                           UPDATE no action,
-                                                  FOREIGN KEY([Intermediate]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                                  FOREIGN KEY( Intermediate  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  )
                                            ON
                                            DELETE no action
                                            ON
                                            UPDATE no action,
-                                                  FOREIGN KEY([Intermediate]) REFERENCES [Team NIYAJ]([Ismail Patel])
+                                                  FOREIGN KEY( Intermediate  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                            ON
                                            DELETE no action
                                            ON
                                            UPDATE no action,
-                                                  FOREIGN KEY([Beginner]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                                  FOREIGN KEY( Intermediate  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
+                                           ON
+                                           DELETE no action
+                                           ON
+                                           UPDATE no action,
+                                                  FOREIGN KEY( Beginner  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
                                            ON
                                            DELETE no action
                                            ON
@@ -252,33 +258,33 @@ UPDATE no action
 @location: 4303.4053 365.76807
 @columnsDescription:  Expert() Intermediate() Intermediate() Intermediate() Beginner()
 @colors: title(#FFD1D1D1) Expert(#FFFAFAFA) Intermediate(#FFFAFAFA) Intermediate(#FFFAFAFA) Intermediate(#FFFAFAFA) Beginner(#FFFAFAFA)
-*/CREATE TABLE [Hobbies]
+*/CREATE TABLE  Hobbies  
                                                  (
-                                                              [id] text autoincrement NOT NULL,
-                                                              [column_2] text autoincrement NOT NULL,
-                                                              [column_3] text autoincrement NOT NULL,
-                                                              [column_4] text autoincrement NOT NULL,
-                                                              [column_5] text autoincrement NOT NULL,
-                                                              FOREIGN KEY([id]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                                               id   text autoincrement NOT NULL,
+                                                               column_2   text autoincrement NOT NULL,
+                                                               column_3   text autoincrement NOT NULL,
+                                                               column_4   text autoincrement NOT NULL,
+                                                               column_5   text autoincrement NOT NULL,
+                                                              FOREIGN KEY( id  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                                  DELETE no action
                                                  ON
                                                  UPDATE no action,
-                                                        FOREIGN KEY([column_2]) REFERENCES [Team NIYAJ]([Jayden Szeto])
-                                                 ON
-                                                 DELETE no action
-                                                 ON
-                                                 UPDATE no action,
-                                                        FOREIGN KEY([column_3]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                                        FOREIGN KEY( column_2  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
                                                  ON
                                                  DELETE no action
                                                  ON
                                                  UPDATE no action,
-                                                        FOREIGN KEY([column_4]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                                        FOREIGN KEY( column_3  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                                  ON
                                                  DELETE no action
                                                  ON
                                                  UPDATE no action,
-                                                        FOREIGN KEY([column_5]) REFERENCES [Team NIYAJ]([Ismail Patel])
+                                                        FOREIGN KEY( column_4  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
+                                                 ON
+                                                 DELETE no action
+                                                 ON
+                                                 UPDATE no action,
+                                                        FOREIGN KEY( column_5  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                                  ON
                                                  DELETE no action
                                                  ON
@@ -289,33 +295,33 @@ UPDATE no action
 @table: Hobbies
 @location: 4448.501 1134.6152
 @colors: title(#FFD1D1D1) id(#FFFAFAFA) column_2(#FFFAFAFA) column_3(#FFFAFAFA) column_4(#FFFAFAFA) column_5(#FFFAFAFA)
-*/CREATE TABLE [Preferred College]
+*/CREATE TABLE  Preferred College  
                                                        (
-                                                                    [UCLA] text autoincrement NOT NULL,
-                                                                    [Carnegie Mellon/ UC Berkeley] text autoincrement NOT NULL,
-                                                                    [UCLA] text autoincrement NOT NULL,
-                                                                    [Undecided] text autoincrement NOT NULL,
-                                                                    [UC Berkeley] text autoincrement NOT NULL,
-                                                                    FOREIGN KEY([UCLA]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                                                     UCLA   text autoincrement NOT NULL,
+                                                                     Carnegie Mellon/ UC Berkeley   text autoincrement NOT NULL,
+                                                                     UCLA   text autoincrement NOT NULL,
+                                                                     Undecided   text autoincrement NOT NULL,
+                                                                     UC Berkeley   text autoincrement NOT NULL,
+                                                                    FOREIGN KEY( UCLA  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                                        DELETE no action
                                                        ON
                                                        UPDATE no action,
-                                                              FOREIGN KEY([Carnegie Mellon/ UC Berkeley]) REFERENCES [Team NIYAJ]([Jayden Szeto])
-                                                       ON
-                                                       DELETE no action
-                                                       ON
-                                                       UPDATE no action,
-                                                              FOREIGN KEY([UCLA]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                                              FOREIGN KEY( Carnegie Mellon/ UC Berkeley  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
                                                        ON
                                                        DELETE no action
                                                        ON
                                                        UPDATE no action,
-                                                              FOREIGN KEY([Undecided]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                                              FOREIGN KEY( UCLA  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                                        ON
                                                        DELETE no action
                                                        ON
                                                        UPDATE no action,
-                                                              FOREIGN KEY([UC Berkeley]) REFERENCES [Team NIYAJ]([Ismail Patel])
+                                                              FOREIGN KEY( Undecided  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
+                                                       ON
+                                                       DELETE no action
+                                                       ON
+                                                       UPDATE no action,
+                                                              FOREIGN KEY( UC Berkeley  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                                        ON
                                                        DELETE no action
                                                        ON
@@ -327,39 +333,39 @@ UPDATE no action
 @location: 4637.7876 863.0676
 @columnsDescription:  UCLA() Carnegie Mellon/ UC Berkeley() UCLA() Undecided() UC Berkeley()
 @colors: title(#FFD1D1D1) UCLA(#FFFAFAFA) Carnegie Mellon/ UC Berkeley(#FFFAFAFA) UCLA(#FFFAFAFA) Undecided(#FFFAFAFA) UC Berkeley(#FFFAFAFA)
-*/CREATE TABLE [Class Jobs]
+*/CREATE TABLE  Class Jobs  
                                                              (
-                                                                          [Publicist] text autoincrement NOT NULL,
-                                                                          [Event Planner] text autoincrement NOT NULL,
-                                                                          [Facilitator] text autoincrement NOT NULL,
-                                                                          [Decorator] text autoincrement NOT NULL,
-                                                                          [Entertainer] text autoincrement NOT NULL,
-                                                                          [Coordinator] text autoincrement NOT NULL,
-                                                                          FOREIGN KEY([Publicist]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                                                           Publicist   text autoincrement NOT NULL,
+                                                                           Event Planner   text autoincrement NOT NULL,
+                                                                           Facilitator   text autoincrement NOT NULL,
+                                                                           Decorator   text autoincrement NOT NULL,
+                                                                           Entertainer   text autoincrement NOT NULL,
+                                                                           Coordinator   text autoincrement NOT NULL,
+                                                                          FOREIGN KEY( Publicist  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                                              DELETE no action
                                                              ON
                                                              UPDATE no action,
-                                                                    FOREIGN KEY([Event Planner]) REFERENCES [Team NIYAJ]([Nolan Li])
-                                                             ON
-                                                             DELETE no action
-                                                             ON
-                                                             UPDATE no action,
-                                                                    FOREIGN KEY([Facilitator]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                                                    FOREIGN KEY( Event Planner  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
                                                              ON
                                                              DELETE no action
                                                              ON
                                                              UPDATE no action,
-                                                                    FOREIGN KEY([Decorator]) REFERENCES [Team NIYAJ]([Ismail Patel])
+                                                                    FOREIGN KEY( Facilitator  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
                                                              ON
                                                              DELETE no action
                                                              ON
                                                              UPDATE no action,
-                                                                    FOREIGN KEY([Entertainer]) REFERENCES [Team NIYAJ]([Jayden Szeto])
+                                                                    FOREIGN KEY( Decorator  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                                              ON
                                                              DELETE no action
                                                              ON
                                                              UPDATE no action,
-                                                                    FOREIGN KEY([Coordinator]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                                                    FOREIGN KEY( Entertainer  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
+                                                             ON
+                                                             DELETE no action
+                                                             ON
+                                                             UPDATE no action,
+                                                                    FOREIGN KEY( Coordinator  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                                              ON
                                                              DELETE no action
                                                              ON
@@ -370,33 +376,33 @@ UPDATE no action
 @table: Class Jobs
 @location: 2565.7363 1404.1013
 @colors: title(#FFD1D1D1) Publicist(#FFFAFAFA) Event Planner(#FFFAFAFA) Facilitator(#FFFAFAFA) Decorator(#FFFAFAFA) Entertainer(#FFFAFAFA) Coordinator(#FFFAFAFA)
-*/CREATE TABLE [Emails                                                                    (                                                                                 Personal                                                                    )                                                                    ]
+*/CREATE TABLE  Emails                                                                    (                                                                                 Personal                                                                    )                                                                      
                                                                    (
-                                                                                [yashwanthsunkesula123@gmail.com] text autoincrement NOT NULL,
-                                                                                [jayden20076757@gmail.com] text autoincrement NOT NULL,
-                                                                                [bhagiaryan@gmail.com] text autoincrement NOT NULL,
-                                                                                [starplatinumtheworld006@gmail.com] text autoincrement NOT NULL,
-                                                                                [Ismail073107@gmail.com] text autoincrement NOT NULL,
-                                                                                FOREIGN KEY([yashwanthsunkesula123@gmail.com]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                                                                 yashwanthsunkesula123@gmail.com   text autoincrement NOT NULL,
+                                                                                 jayden20076757@gmail.com   text autoincrement NOT NULL,
+                                                                                 bhagiaryan@gmail.com   text autoincrement NOT NULL,
+                                                                                 starplatinumtheworld006@gmail.com   text autoincrement NOT NULL,
+                                                                                 Ismail073107@gmail.com   text autoincrement NOT NULL,
+                                                                                FOREIGN KEY( yashwanthsunkesula123@gmail.com  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                                                    DELETE no action
                                                                    ON
                                                                    UPDATE no action,
-                                                                          FOREIGN KEY([jayden20076757@gmail.com]) REFERENCES [Team NIYAJ]([Jayden Szeto])
-                                                                   ON
-                                                                   DELETE no action
-                                                                   ON
-                                                                   UPDATE no action,
-                                                                          FOREIGN KEY([bhagiaryan@gmail.com]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                                                          FOREIGN KEY( jayden20076757@gmail.com  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
                                                                    ON
                                                                    DELETE no action
                                                                    ON
                                                                    UPDATE no action,
-                                                                          FOREIGN KEY([starplatinumtheworld006@gmail.com]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                                                          FOREIGN KEY( bhagiaryan@gmail.com  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                                                    ON
                                                                    DELETE no action
                                                                    ON
                                                                    UPDATE no action,
-                                                                          FOREIGN KEY([Ismail073107@gmail.com]) REFERENCES [Team NIYAJ]([Ismail Patel])
+                                                                          FOREIGN KEY( starplatinumtheworld006@gmail.com  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
+                                                                   ON
+                                                                   DELETE no action
+                                                                   ON
+                                                                   UPDATE no action,
+                                                                          FOREIGN KEY( Ismail073107@gmail.com  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                                                    ON
                                                                    DELETE no action
                                                                    ON
@@ -408,33 +414,33 @@ UPDATE no action
 @location: 4890.3433 548.99146
 @columnsDescription:  yashwanthsunkesula123@gmail.com() jayden20076757@gmail.com() bhagiaryan@gmail.com() starplatinumtheworld006@gmail.com() Ismail073107@gmail.com()
 @colors: title(#FFD1D1D1) yashwanthsunkesula123@gmail.com(#FFFAFAFA) jayden20076757@gmail.com(#FFFAFAFA) bhagiaryan@gmail.com(#FFFAFAFA) starplatinumtheworld006@gmail.com(#FFFAFAFA) Ismail073107@gmail.com(#FFFAFAFA)
-*/CREATE TABLE [Email                                                                          (                                                                                       FUSD                                                                          )                                                                          ]
+*/CREATE TABLE  Email                                                                          (                                                                                       FUSD                                                                          )                                                                            
                                                                          (
-                                                                                      [yashws278@fusdk12.net] text autoincrement NOT NULL,
-                                                                                      [jaysze683@fusdk12.net] text autoincrement NOT NULL,
-                                                                                      [arybha295@fusdk12.net] text autoincrement NOT NULL,
-                                                                                      [nolli288@fusdk12.net] text autoincrement NOT NULL,
-                                                                                      [ismpat567@fusdk12.net] text autoincrement NOT NULL,
-                                                                                      FOREIGN KEY([yashws278@fusdk12.net]) REFERENCES [Team NIYAJ]([Yashwanth Venkata Sunkesula]) ON
+                                                                                       yashws278@fusdk12.net   text autoincrement NOT NULL,
+                                                                                       jaysze683@fusdk12.net   text autoincrement NOT NULL,
+                                                                                       arybha295@fusdk12.net   text autoincrement NOT NULL,
+                                                                                       nolli288@fusdk12.net   text autoincrement NOT NULL,
+                                                                                       ismpat567@fusdk12.net   text autoincrement NOT NULL,
+                                                                                      FOREIGN KEY( yashws278@fusdk12.net  ) REFERENCES  Team NIYAJ  ( Yashwanth Venkata Sunkesula  ) ON
                                                                          DELETE no action
                                                                          ON
                                                                          UPDATE no action,
-                                                                                FOREIGN KEY([jaysze683@fusdk12.net]) REFERENCES [Team NIYAJ]([Jayden Szeto])
-                                                                         ON
-                                                                         DELETE no action
-                                                                         ON
-                                                                         UPDATE no action,
-                                                                                FOREIGN KEY([arybha295@fusdk12.net]) REFERENCES [Team NIYAJ]([Aryan Bhagia])
+                                                                                FOREIGN KEY( jaysze683@fusdk12.net  ) REFERENCES  Team NIYAJ  ( Jayden Szeto  )
                                                                          ON
                                                                          DELETE no action
                                                                          ON
                                                                          UPDATE no action,
-                                                                                FOREIGN KEY([nolli288@fusdk12.net]) REFERENCES [Team NIYAJ]([Nolan Li])
+                                                                                FOREIGN KEY( arybha295@fusdk12.net  ) REFERENCES  Team NIYAJ  ( Aryan Bhagia  )
                                                                          ON
                                                                          DELETE no action
                                                                          ON
                                                                          UPDATE no action,
-                                                                                FOREIGN KEY([ismpat567@fusdk12.net]) REFERENCES [Team NIYAJ]([Ismail Patel])
+                                                                                FOREIGN KEY( nolli288@fusdk12.net  ) REFERENCES  Team NIYAJ  ( Nolan Li  )
+                                                                         ON
+                                                                         DELETE no action
+                                                                         ON
+                                                                         UPDATE no action,
+                                                                                FOREIGN KEY( ismpat567@fusdk12.net  ) REFERENCES  Team NIYAJ  ( Ismail Patel  )
                                                                          ON
                                                                          DELETE no action
                                                                          ON
