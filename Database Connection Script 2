@@ -1,0 +1,22 @@
+<?php
+include("connect.php"); // Include the database connection script
+
+// Perform database queries here
+// For example:
+$sql = "SELECT * FROM Team_Niyaj";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "ID: " . $row["id"] . " - Name: " . $row["name"] . "<br>";
+    }
+} else {
+    echo "No results found.";
+}
+
+// Close the database connection when you're done
+$conn->close();
+?>
+
+
+
