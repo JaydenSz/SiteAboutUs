@@ -24,7 +24,7 @@ CREATE TABLE projects
 @description: All of our projects and endeavors
 @location: 1247.6484 724.83484
 @colors: title(#FFD1D1D1) Website(#FFFAFAFA)
-*/CREATE TABLE Jobs
+ CREATE TABLE Jobs
              (
                           Webmaster text AUTO_INCREMENT NOT NULL,
                           Front_END_Developer text AUTO_INCREMENT NOT NULL,
@@ -62,7 +62,7 @@ UPDATE no action
 @description: All of our team roles
 @location: 1464.4132 596.2505
 @colors: title(#FFD1D1D1) Webmaster(#FFFAFAFA) Front End Developer(#FFFAFAFA) Back-end Developer(#FFFAFAFA) Content_Specialist(#FFFAFAFA) Teach_Support(#FFFAFAFA)
-*/CREATE TABLE  Skills  
+ CREATE TABLE  Skills  
                    (
                                  HTML   text AUTO_INCREMENT NOT NULL,
                                  JavaScript   text AUTO_INCREMENT NOT NULL,
@@ -106,7 +106,7 @@ UPDATE no action
 @description: Coding skills
 @location: 1666.4636 887.57587
 @colors: title(#FFD1D1D1) HTML(#FFFAFAFA) JavaScript(#FFFAFAFA) C++(#FFFAFAFA) SQL(#FFFAFAFA) PHP(#FFFAFAFA) Java(#FFFAFAFA)
-*/CREATE TABLE  Team_Niyaj  
+ CREATE TABLE  Team_Niyaj  
                          (
                                        Yashwanth_Venkata_Sunkesula   text AUTO_INCREMENT NOT NULL,
                                        Jayden_Szeto   text AUTO_INCREMENT NOT NULL,
@@ -144,7 +144,7 @@ UPDATE no action
 @location: 3553.6384 1011.6017
 @columnsDescription:  Yashwanth_Venkata_Sunkesula() Jayden_Szeto() Aryan_Bhagia() Nolan_Li() Ismail_Patel()
 @colors: title(#FFD1D1D1) Yashwanth_Venkata_Sunkesula(#FFFAFAFA) Jayden_Szeto(#FFFAFAFA) Aryan_Bhagia(#FFFAFAFA) Nolan_Li(#FFFAFAFA) Ismail_Patel(#FFFAFAFA)
-*/CREATE TABLE  Favorite_Color  
+ CREATE TABLE  Favorite_Color  
                                (
                                              Blue   text AUTO_INCREMENT NOT NULL,
                                              Green   text AUTO_INCREMENT NOT NULL,
@@ -182,7 +182,7 @@ UPDATE no action
 @location: 3689.6501 484.57538
 @columnsDescription:  Blue() Green() Green() Blue() Emerald Green()
 @colors: title(#FFD1D1D1) Blue(#FFFAFAFA) Green(#FFFAFAFA) Green(#FFFAFAFA) Blue(#FFFAFAFA) Emerald Green(#FFFAFAFA)
-*/CREATE TABLE  Birthday  
+ CREATE TABLE  Birthday  
                                      (
                                                    10/16/2007   text AUTO_INCREMENT NOT NULL,
                                                    7 /31/2007   text AUTO_INCREMENT NOT NULL,
@@ -220,7 +220,7 @@ UPDATE no action
 @location: 4082.5562 673.1602
 @columnsDescription:  10/16/2007() 7/31/2007() 1/24/2007() 11/2/2006() 4/21/2007()
 @colors: title(#FFD1D1D1) 10/16/2007(#FFFAFAFA) 7/31/2007(#FFFAFAFA) 1/24/2007(#FFFAFAFA) 11/2/2006(#FFFAFAFA) 4/21/2007(#FFFAFAFA)
-*/CREATE TABLE  Coding_Experience  
+ CREATE TABLE  Coding_Experience  
                                            (
                                                          Expert   text AUTO_INCREMENT NOT NULL,
                                                          Intermediate   text AUTO_INCREMENT NOT NULL,
@@ -258,7 +258,7 @@ UPDATE no action
 @location: 4303.4053 365.76807
 @columnsDescription:  Expert() Intermediate() Intermediate() Intermediate() Beginner()
 @colors: title(#FFD1D1D1) Expert(#FFFAFAFA) Intermediate(#FFFAFAFA) Intermediate(#FFFAFAFA) Intermediate(#FFFAFAFA) Beginner(#FFFAFAFA)
-*/CREATE TABLE  Hobbies  
+ CREATE TABLE  Hobbies  
                                                  (
                                                                id   text AUTO_INCREMENT NOT NULL,
                                                                column_2   text AUTO_INCREMENT NOT NULL,
@@ -295,7 +295,7 @@ UPDATE no action
 @table: Hobbies
 @location: 4448.501 1134.6152
 @colors: title(#FFD1D1D1) id(#FFFAFAFA) column_2(#FFFAFAFA) column_3(#FFFAFAFA) column_4(#FFFAFAFA) column_5(#FFFAFAFA)
-*/CREATE TABLE  Preferred_College  
+ CREATE TABLE  Preferred_College  
                                                        (
                                                                      UCLA   text AUTO_INCREMENT NOT NULL,
                                                                      Carnegie_Mellon/ UC_Berkeley   text AUTO_INCREMENT NOT NULL,
@@ -333,7 +333,7 @@ UPDATE no action
 @location: 4637.7876 863.0676
 @columnsDescription:  UCLA() Carnegie Mellon/ UC Berkeley() UCLA() Undecided() UC Berkeley()
 @colors: title(#FFD1D1D1) UCLA(#FFFAFAFA) Carnegie Mellon/ UC Berkeley(#FFFAFAFA) UCLA(#FFFAFAFA) Undecided(#FFFAFAFA) UC Berkeley(#FFFAFAFA)
-*/CREATE TABLE  Class_Jobs  
+ CREATE TABLE  Class_Jobs  
                                                              (
                                                                            Publicist   text AUTO_INCREMENT NOT NULL,
                                                                            Event_Planner   text AUTO_INCREMENT NOT NULL,
@@ -376,7 +376,7 @@ UPDATE no action
 @table: Class_Jobs
 @location: 2565.7363 1404.1013
 @colors: title(#FFD1D1D1) Publicist(#FFFAFAFA) Event_Planner(#FFFAFAFA) Facilitator(#FFFAFAFA) Decorator(#FFFAFAFA) Entertainer(#FFFAFAFA) Coordinator(#FFFAFAFA)
-*/CREATE TABLE  Emails                                                                    (                                                                                 Personal                                                                    )                                                                      
+ CREATE TABLE  Emails                                                                    (                                                                                 Personal                                                                    )                                                                      
                                                                    (
                                                                                  yashwanthsunkesula123@gmail.com   text AUTO_INCREMENT NOT NULL,
                                                                                  jayden20076757@gmail.com   text AUTO_INCREMENT NOT NULL,
@@ -414,7 +414,7 @@ UPDATE no action
 @location: 4890.3433 548.99146
 @columnsDescription:  yashwanthsunkesula123@gmail.com() jayden20076757@gmail.com() bhagiaryan@gmail.com() starplatinumtheworld006@gmail.com() Ismail073107@gmail.com()
 @colors: title(#FFD1D1D1) yashwanthsunkesula123@gmail.com(#FFFAFAFA) jayden20076757@gmail.com(#FFFAFAFA) bhagiaryan@gmail.com(#FFFAFAFA) starplatinumtheworld006@gmail.com(#FFFAFAFA) Ismail073107@gmail.com(#FFFAFAFA)
-*/CREATE TABLE  Email(FUSD)                                                                       
+ CREATE TABLE  Email(FUSD)                                                                       
                                                                          (
                                                                                        yashws278@fusdk12.net   text AUTO_INCREMENT NOT NULL,
                                                                                        jaysze683@fusdk12.net   text AUTO_INCREMENT NOT NULL,
@@ -452,4 +452,4 @@ UPDATE no action
 @location: 5007.034 217.05722
 @columnsDescription:  yashws278@fusdk12.net() jaysze683@fusdk12.net() arybha295@fusdk12.net() nolli288@fusdk12.net() ismpat567@fusdk12.net()
 @colors: title(#FFD1D1D1) yashws278@fusdk12.net(#FFFAFAFA) jaysze683@fusdk12.net(#FFFAFAFA) arybha295@fusdk12.net(#FFFAFAFA) nolli288@fusdk12.net(#FFFAFAFA) ismpat567@fusdk12.net(#FFFAFAFA)
-*/
+ 
