@@ -18,7 +18,7 @@ VALUES
     ('Jayden Szeto', '2007-04-12', 'Blue', 'I have some experience in Java and HTML (I got a 5 on the APCSA exam)', 'gaming, hiking, reading, talking with friends', 'Carnegie Mellon, Berkeley', 'There is a lot of creativity that can be implemented', 'Front End'),
     ('Ismail Patel', '2007-07-31', 'Green', 'Java', 'Boardgames and videogames', 'Berkeley', 'Friends', 'Tech Support'),
     ('Aryan Bhagia', '2007-01-24', 'Emerald Green', 'Python and HTML', 'Sleeping, videogames, and sleeping', 'UCLA', 'The fact that we get to manage ourselves', 'Webmaster'),
-    ('Nolan Li', '2006-11-02', 'Greed', 'basically none if you dont count scratch and ics', 'video games, drawing, listening to music', 'no clue', 'free time, its basically flex', 'content specialist'),
+    ('Nolan Li', '2006-11-02', 'Green', 'basically none if you dont count scratch and ics', 'video games, drawing, listening to music', 'no clue', 'free time, its basically flex', 'content specialist'),
     ('Yashwanth Venkata Sunkesula', '2007-10-16', 'Blue', 'Intermediate', 'Sports, Reading, Music', 'UCLA', 'We have a lot of fluidity with projects', 'Back-End Developer');
 
 -- Create a table for names
@@ -61,6 +61,14 @@ CREATE TABLE FavoriteColors (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
 
+    INSERT INTO FavoriteColors (StudentID, Favorite color)
+VALUES
+    (1, 'Blue'),
+    (2, 'Green'),
+    (3, 'Emerald Green'),
+    (4, 'Green'),
+    (5, 'Blue');
+
 -- Create a table for coding experience
 CREATE TABLE CodingExperience (
     ExperienceID INT PRIMARY KEY AUTO_INCREMENT,
@@ -68,6 +76,14 @@ CREATE TABLE CodingExperience (
     Experience TEXT,
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
+
+    INSERT INTO CodingExperience (StudentID, Coding Experience)
+VALUES
+    (1, 'I have some experience in Java and HTML. I got a 5 on the APCSA exam'),
+    (2, 'Java'),
+    (3, 'Python and HTML'),
+    (4, 'basically none if you don't count scratch and ics'),
+    (5, 'Intermediate');
 
 -- Create a table for hobbies
 CREATE TABLE Hobbies (
@@ -77,6 +93,14 @@ CREATE TABLE Hobbies (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
 
+    INSERT INTO Hobbies (StudentID, Hobbies)
+VALUES
+    (1, 'gaming, hiking, reading, talking with friends'),
+    (2, 'Boardgames and videogames'),
+    (3, 'Sleeping, videogames, and sleeping'),
+    (4, 'video games, drawing, listening to music'),
+    (5, 'Sports, Reading, Music');
+
 -- Create a table for preferred colleges
 CREATE TABLE PreferredColleges (
     CollegeID INT PRIMARY KEY AUTO_INCREMENT,
@@ -84,6 +108,14 @@ CREATE TABLE PreferredColleges (
     PreferredCollege VARCHAR(255),
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
+
+    INSERT INTO PreferredColleges (StudentID, College)
+VALUES
+    (1, 'Carnegie Mellon, Berkeley'),
+    (2, 'Berkeley'),
+    (3, 'UCLA'),
+    (4, 'Berkeley'),
+    (5, 'UCLA');
 
 -- Create a table for favorite things about APCSP
 CREATE TABLE FavoriteAPCSP (
@@ -93,6 +125,14 @@ CREATE TABLE FavoriteAPCSP (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
 
+    INSERT INTO FavoriteAPCSP (StudentID, Favorite thing)
+VALUES
+    (1, 'There is a lot of creativity that can be implemented'),
+    (2, 'Friends'),
+    (3, 'The fact that we get to manage ourselves'),
+    (4, 'no clue'),
+    (5, 'We have a lot of fluidity with projects');
+
 -- Create a table for team roles
 CREATE TABLE TeamRoles (
     RoleID INT PRIMARY KEY AUTO_INCREMENT,
@@ -100,4 +140,16 @@ CREATE TABLE TeamRoles (
     TeamRole VARCHAR(255),
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
+
+    INSERT INTO TeamRoles (StudentID, Roles)
+VALUES
+    (1, 'Front End'),
+    (2, 'Tech Support'),
+    (3, 'Webmaster'),
+    (4, 'Content Specialist'),
+    (5, 'Back-End Developer');
+
+
+
+
 
