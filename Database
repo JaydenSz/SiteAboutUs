@@ -13,7 +13,7 @@ CREATE TABLE Students (
     TeamRole VARCHAR(255)
 );
 
-  INSERT INTO students (Name, Birthday, FavoriteColor, CodingExperience, Hobbies, PreferredCollege, FavoriteThingAboutAPCSP, TeamRole)
+  INSERT INTO Students (Name, Birthday, FavoriteColor, CodingExperience, Hobbies, PreferredCollege, FavoriteThingAboutAPCSP, TeamRole)
 VALUES
     ('Jayden Szeto', '2007-04-12', 'Blue', 'I have some experience in Java and HTML (I got a 5 on the APCSA exam)', 'gaming, hiking, reading, talking with friends', 'Carnegie Mellon, Berkeley', 'There is a lot of creativity that can be implemented', 'Front End'),
     ('Ismail Patel', '2007-07-31', 'Green', 'Java', 'Boardgames and videogames', 'Berkeley', 'Friends', 'Tech Support'),
@@ -29,6 +29,14 @@ CREATE TABLE Names (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
 
+    INSERT INTO Names ( StudentID, Name)
+VALUES
+    (1, 'Jayden Szeto'),
+    (2, 'Ismail Patel'),
+    (3, 'Aryan Bhagia'),
+    (4, 'Nolan Li'),
+    (5, 'Yashwanth Venkata Sunkesula');
+
 -- Create a table for birthdays
 CREATE TABLE Birthdays (
     BirthdayID INT PRIMARY KEY AUTO_INCREMENT,
@@ -36,6 +44,14 @@ CREATE TABLE Birthdays (
     Birthday DATE,
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
+
+    INSERT INTO Birthdays ( StudentID, Birthday)
+VALUES
+    (1, '2007-04-12'),
+    (2, '2007-07-31'),
+    (3, '2007-01-24'),
+    (4, '2006-11-02'),
+    (5, '2007-10-16');
 
 -- Create a table for favorite colors
 CREATE TABLE FavoriteColors (
